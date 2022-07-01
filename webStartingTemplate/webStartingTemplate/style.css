@@ -16,7 +16,7 @@ body{
     z-index: 5;
     position: absolute;
     width: 100%;
-    background-color: greenyellow;
+    background-color: #7fc242;
     height: 100vh;
     padding-top: 50px;
 }
