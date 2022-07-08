@@ -12,6 +12,23 @@ while($fetchUser = mysqli_fetch_array($queryUser))
     $course=$fetchUser['course'];
 }
 
+
+//update user records
+if(isset($_post['updateRecords']))
+{
+    //fetch form data
+    $name=$fetchUser['fullname'];
+    $phone=$fetchUser['phonenumber'];
+    $emailAddress=$fetchUser['email'];
+    $formgender=$fetchUser['gender'];
+    $selectcourse=$fetchUser['course'];
+
+    //updating records
+    $updateQuery=mysqli_query($conn,
+    "UPDATE enrollment SET  fullname='$name', phonenumber='$phone', gender='$formgender', course='$selectcourse'
+    WHERE no='".$_GET['id']."' ");
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +50,7 @@ while($fetchUser = mysqli_fetch_array($queryUser))
                             <h4>Edit Student:</h4>
                         </div>
                         <div class="card-body">
-                <form action="" method="post">
+                <form action="edit-enrollment.php" method="post">
                            <div class="card">
                              <div class="card-body">
 
@@ -77,7 +94,7 @@ while($fetchUser = mysqli_fetch_array($queryUser))
                              </div>
                            </div>
 
-                           <button type="submit" name="enroll" class="btn btn-primary">submit application</button>
+                           <button type="submit" name="updateRecords" class="btn btn-primary">submit application</button>
 
                 </form>
                         </div>
