@@ -25,7 +25,7 @@ $sqlQuery=mysqli_Query($conn, "SELECT * FROM enrollment");
 					</div>
 					<div class="card-body"></div>
 					<div class="card-footer"></div>
-                    <table class="table table-striped table-hover table-responsive">
+                    <table class="table table-striped table-hover table-responsive" style="font-style: 12px;">
                         <thead>
                             <tr>
                                 <th>No.</th>
