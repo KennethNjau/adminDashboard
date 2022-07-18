@@ -58,7 +58,7 @@ $sqlQuery=mysqli_Query($conn, "SELECT * FROM enrollment");
                                     <a href="delete-enrollment.php?id=<?php echo $fetchRecords['no'] ?>" class="btn btn-danger btn-sm">
                                         <i class="fa fa-trash"></i>
                                     </a>
-                                </td>
+                                    </td>
 
 								</tr>
 							<?php } ?>

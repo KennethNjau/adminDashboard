@@ -53,6 +53,17 @@ $sqlQuery=mysqli_Query($conn, "SELECT * FROM contactus");
 									<td><?php echo $fetchRecords['email'] ?></td>
 									<td><?php echo $fetchRecords['message'] ?></td>
 									<td><?php echo $fetchRecords['created_at'] ?></td>
+									<td>
+									<a href="edit-message.php?id=<?php echo $fetchRecords['number'] ?>" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="view-message.php?id=<?php echo $fetchRecords['number'] ?>" class="btn btn-info btn-sm">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="delete-message.php?id=<?php echo $fetchRecords['number'] ?>" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+									</td>
 								</tr>
 							<?php } ?>
                         </tbody>
