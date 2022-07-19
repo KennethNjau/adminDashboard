@@ -22,6 +22,7 @@ $sqlQuery=mysqli_Query($conn, "SELECT * FROM enrollment");
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>Students</span>
+						<a href="newrecord.php"><button name="enroll" class="btn btn-primary btn-sm float-right">Enroll Student</button></a>
 					</div>
 					<div class="card-body"></div>
 					<div class="card-footer"></div>
