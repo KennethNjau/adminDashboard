@@ -31,12 +31,13 @@ if(isset($_POST['updateRecords']))
 
     
     $updateQuery=mysqli_query($conn,
-    "UPDATE contactus SET firstname='$firstname',lastname='$lastname',email='$email' phonenumber='$phonenumber', message='$message'
+    "UPDATE contactus SET firstname='$firstname',lastname='$lastname',email='$email',phonenumber='$phonenumber', message='$message'
     WHERE number='".$_GET['id']."' ");
 
     if($updateQuery)
     {
         $message="update successful";
+        header('location:contactus.php');
     }
     else
     {
